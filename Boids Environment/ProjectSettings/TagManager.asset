@@ -7,6 +7,7 @@ TagManager:
   - Boid
   - plant
   - floor
+  - mesh
   layers:
   - Default
   - TransparentFX

@@ -48,9 +48,9 @@ public class MapGenerator : MonoBehaviour
         }
 
         MapDisplay display = FindObjectOfType<MapDisplay>();
-        if (drawMode == DrawMode.NoiseMap) display.DrawTexture(UnityEditor.AssetImporters.TextureGenerator.TextureFromHeightMap(noiseMap)); //draws to output
-        else if (drawMode == DrawMode.ColourMap) display.DrawTexture(UnityEditor.AssetImporters.TextureGenerator.TextureFromColourMap(colourMap, mapChunkSize, mapChunkSize));
-        else if (drawMode == DrawMode.mesh) display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail), UnityEditor.AssetImporters.TextureGenerator.TextureFromColourMap(colourMap, mapChunkSize, mapChunkSize));
+        if (drawMode == DrawMode.NoiseMap) display.DrawTexture(TextureGenerator.TextureFromHeightMap(noiseMap)); //draws to output
+        else if (drawMode == DrawMode.ColourMap) display.DrawTexture(TextureGenerator.TextureFromColourMap(colourMap, mapChunkSize, mapChunkSize));
+        else if (drawMode == DrawMode.mesh) display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail), TextureGenerator.TextureFromColourMap(colourMap, mapChunkSize, mapChunkSize));
     }
 
     private void OnValidate() //regulates the variables to make sure inputs will work

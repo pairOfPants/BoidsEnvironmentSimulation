@@ -14,19 +14,25 @@ public class CollisionDetection : MonoBehaviour
         {
             print("BOID ON BOID ENTER");
         }*/
-        if (this.gameObject.tag == "floor" && other.gameObject.tag == "plant")
+        if (this.gameObject.tag == "plant" && other.gameObject.tag == "floor")
         {
-            // Debug.Log("WADDUP MANTIS");
-            other.gameObject.transform.rotation = this.gameObject.transform.localRotation;
-            other.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            other.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            this.gameObject.transform.rotation = this.gameObject.transform.localRotation;
+            this.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            this.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        }
+        if (this.gameObject.tag == "plant" && other.gameObject.tag == "mesh")
+        {
+             Debug.Log("Plants hit MESH");
+            this.gameObject.transform.rotation = this.gameObject.transform.localRotation;
+            this.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            this.gameObject.GetComponent<Rigidbody>().useGravity = false;
         }
         if(this.gameObject.tag == "Boid" && other.gameObject.tag == "plant")
         {
             //TODO incrememnt boid's hunger when colliding with plant
-            other.gameObject.SetActive(false);
-            Object.DestroyImmediate(other.gameObject);
-            Object.DestroyImmediate(other.gameObject);
+            // other.gameObject.SetActive(false);
+            // Object.DestroyImmediate(other.gameObject);
+            // Object.DestroyImmediate(other.gameObject);
         }
         /*
          * if this is a plant and that is a plant
