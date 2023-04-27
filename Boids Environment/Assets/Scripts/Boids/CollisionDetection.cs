@@ -47,9 +47,9 @@ public class CollisionDetection : MonoBehaviour
         }
         if(this.gameObject.tag == "plant" && other.gameObject.tag == "plant")
         {
-          //  print("PLANT ON PLANT ACTION ;)");
-            other.gameObject.GetComponent<Rigidbody>().position = other.gameObject.GetComponent<Rigidbody>().position + new Vector3(0.02f, 0, 0.02f);
-            this.gameObject.GetComponent<Rigidbody>().position = this.gameObject.GetComponent<Rigidbody>().position - new Vector3(0.02f, 0, 0.02f);
+          //    print("PLANT ON PLANT ACTION ;)");
+            other.gameObject.GetComponent<Rigidbody>().position = other.gameObject.GetComponent<Rigidbody>().position + new Vector3(100.02f, 0, 100.02f);
+            this.gameObject.GetComponent<Rigidbody>().position = this.gameObject.GetComponent<Rigidbody>().position - new Vector3(100.02f, 0, 100.02f);
         }
     }
     void OnTriggerExit(Collider other)
