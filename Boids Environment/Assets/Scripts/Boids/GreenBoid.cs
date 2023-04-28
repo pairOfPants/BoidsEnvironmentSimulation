@@ -97,13 +97,13 @@ public class GreenBoid : MonoBehaviour {
             }
         }
 
-        if (IsHeadingForCollision() && !IsHeadingForPrey() ) {
+        if (IsHeadingForCollision()) {
             Vector3 collisionAvoidDir = ObstacleRays ();
-            Vector3 collisionAvoidForce = SteerTowards (collisionAvoidDir) * settings.avoidCollisionWeight;
-            acceleration += collisionAvoidForce;
+           // Vector3 collisionAvoidForce = SteerTowards (collisionAvoidDir) * settings.avoidCollisionWeight;
+           // acceleration += collisionAvoidForce;
         }
         hungerWeight = HowHungry();
-        acceleration += SteerTowards(PreyRays()) * hungerWeight;
+        //acceleration += SteerTowards(PreyRays()) * hungerWeight;
 
         velocity += acceleration * Time.deltaTime;
         float speed = velocity.magnitude;
