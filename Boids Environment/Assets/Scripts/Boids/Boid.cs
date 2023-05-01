@@ -70,7 +70,6 @@ public class Boid : MonoBehaviour
 
         if (target != null) 
         {
-            print("LALALALA");
             Vector3 offsetToTarget = (target.position - position);
             acceleration = SteerTowards (offsetToTarget) * settings.targetWeight;
         }

@@ -47,6 +47,8 @@ public class RedBoid : MonoBehaviour {
         float startSpeed = (settings.minSpeed + settings.maxSpeed) / 2;
         velocity = transform.forward * startSpeed;
 
+        this.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+
         System.Random random = new System.Random();
         hunger = settings.hunger + Random.Range(-10, 35);
     }
@@ -63,7 +65,6 @@ public class RedBoid : MonoBehaviour {
     }
 
     public void UpdateBoid () {
-       
 
         Vector3 acceleration = Vector3.zero;
 
@@ -95,8 +96,6 @@ public class RedBoid : MonoBehaviour {
                     }
                 }
             }
-
-            
         }
 
         if (IsHeadingForCollision ()) {
@@ -105,7 +104,7 @@ public class RedBoid : MonoBehaviour {
             acceleration += collisionAvoidForce;
         }
         hungerWeight = HowHungry();
-        acceleration += SteerTowards(PreyRays()) * hungerWeight ;
+        acceleration += SteerTowards(PreyRays()) * hungerWeight;
 
         velocity += acceleration * Time.deltaTime;
         float speed = velocity.magnitude;
@@ -117,6 +116,7 @@ public class RedBoid : MonoBehaviour {
         cachedTransform.forward = dir;
         position = cachedTransform.position;
         forward = dir;
+
 
         if (hunger > 0)
         {
@@ -136,6 +136,7 @@ public class RedBoid : MonoBehaviour {
         if (Physics.SphereCast (position, settings.boundsRadius, forward, out hit, settings.collisionAvoidDst, settings.obstacleMask)) {
             return true;
         }
+
         return false;
     }
     bool IsHeadingForPrey()
@@ -173,19 +174,34 @@ public class RedBoid : MonoBehaviour {
             Ray ray = new Ray(position, dir);
             if (!Physics.SphereCast(ray, settings.boundsRadius, settings.collisionAvoidDst, settings.preyMask))
             {
-             //   print("see plant");
+               // print("see plant");
                 return dir;
             }
         }
         return forward;
     }
-
-    Vector3 SteerTowards(Vector3 vector)
+    /*
+    bool SeesOtherBoids()
     {
-        Vector3 v = vector.normalized * settings.maxSpeed - velocity;
-        return Vector3.ClampMagnitude(v, settings.maxSteerForce);
-    }
+        Vector3[] rayDirections = BoidHelper.directions;
 
+        for (int i = 0; i < rayDirections.Length; i++)
+        {
+            Vector3 dir = cachedTransform.TransformDirection(rayDirections[i]);
+            Ray ray = new Ray(position, dir);
+            RaycastHit hit;
+            if(Physics.SphereCast(position, settings.boundsRadius, forward, out hit, settings.perceptionRadius, settings.boidMask))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    */
+    Vector3 SteerTowards (Vector3 vector) {
+        Vector3 v = vector.normalized * settings.maxSpeed - velocity;
+        return Vector3.ClampMagnitude (v, settings.maxSteerForce);
+    }
     float HowHungry()
     {
         if (hunger < settings.hunger / 2)
