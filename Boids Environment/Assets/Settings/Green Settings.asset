@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a34b66ab32ad4143b3f8b91487824f6, type: 3}
   m_Name: Green Settings
   m_EditorClassIdentifier: 
-  minSpeed: 100
-  maxSpeed: 200
-  perceptionRadius: 202
-  avoidanceRadius: 2
-  maxSteerForce: 8
-  alignWeight: 2
-  cohesionWeight: 2.55
-  seperateWeight: 3
-  targetWeight: 2
+  minSpeed: 400
+  maxSpeed: 800
+  perceptionRadius: 808
+  avoidanceRadius: 120
+  maxSteerForce: 32
+  alignWeight: 8
+  cohesionWeight: 80
+  seperateWeight: 120
+  targetWeight: 8
   hunger: 875.1
   obstacleMask:
     serializedVersion: 2
