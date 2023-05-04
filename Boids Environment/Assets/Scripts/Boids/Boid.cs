@@ -10,10 +10,11 @@ public class Boid : MonoBehaviour
     public Vector3 position;
     [HideInInspector]
     public Vector3 forward;
-    Vector3 velocity;
+    [HideInInspector]
+    public Vector3 velocity;
 
-
-    Vector3 acceleration;
+    [HideInInspector]
+    public Vector3 acceleration;
     [HideInInspector]
     public Vector3 avgFlockHeading;
     [HideInInspector]
@@ -102,7 +103,7 @@ public class Boid : MonoBehaviour
            // Vector3 collisionAvoidForce = SteerTowards (collisionAvoidDir) * settings.avoidCollisionWeight;
            // acceleration += collisionAvoidForce;
         }
-        hungerWeight = HowHungry();
+        //hungerWeight = HowHungry();
         //acceleration += SteerTowards(PreyRays()) * hungerWeight;
 
         velocity += acceleration * Time.deltaTime;
