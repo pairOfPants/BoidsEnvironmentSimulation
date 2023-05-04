@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5746906134426750269}
   - component: {fileID: 5576941479108263322}
   - component: {fileID: -6580632652151968886}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Boid
   m_TagString: Boid
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 3334392698560762539}
   - component: {fileID: 5842600132232689823}
   - component: {fileID: 3185400526394664604}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: CapsuleBoid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8824877253583464066}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2

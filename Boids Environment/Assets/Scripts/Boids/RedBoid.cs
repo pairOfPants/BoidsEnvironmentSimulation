@@ -47,7 +47,7 @@ public class RedBoid : MonoBehaviour {
         float startSpeed = (settings.minSpeed + settings.maxSpeed) / 2;
         velocity = transform.forward * startSpeed;
 
-        this.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+       //transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
 
         System.Random random = new System.Random();
         hunger = settings.hunger + Random.Range(-10, 35);

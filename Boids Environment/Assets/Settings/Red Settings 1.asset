@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029b84f2284b90d4fa1670dc3ca6e40f, type: 3}
   m_Name: Red Settings 1
   m_EditorClassIdentifier: 
-  minSpeed: 80
-  maxSpeed: 140
-  perceptionRadius: 200
+  minSpeed: 50
+  maxSpeed: 100
+  perceptionRadius: 101
   avoidanceRadius: 30
   maxSteerForce: 8
   alignWeight: 2
-  cohesionWeight: 15
+  cohesionWeight: 20
   seperateWeight: 30
   targetWeight: 2
-  hunger: 400
+  hunger: 218
   obstacleMask:
     serializedVersion: 2
     m_Bits: 9728
