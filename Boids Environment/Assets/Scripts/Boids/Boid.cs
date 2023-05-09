@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boid : MonoBehaviour
 {
-    BoidSettings settings;
+    public BoidSettings settings;
 
     [HideInInspector]
     public Vector3 position;
@@ -28,9 +28,9 @@ public class Boid : MonoBehaviour
     public float hunger;
     private float hungerWeight;
 
-     Material material;
-    Transform cachedTransform;
-    Transform target;
+    public Material material;
+    public Transform cachedTransform;
+    public Transform target;
 
     void Awake () {
         material = transform.GetComponentInChildren<MeshRenderer> ().material;
@@ -66,8 +66,6 @@ public class Boid : MonoBehaviour
      public void UpdateBoid ()
     {
         Vector3 acceleration = Vector3.zero;
-
-       
 
         if (target != null) 
         {

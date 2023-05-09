@@ -6,7 +6,7 @@ public class GreenBoidManager : MonoBehaviour {
 
     const int threadGroupSize = 1024;
 
-    public GreenSettings settings;
+    public BoidSettings settings;
     public ComputeShader compute;
     GreenBoid[] boids;
 

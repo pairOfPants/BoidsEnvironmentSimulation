@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class RedSettings : BoidSettings {
+public class RedSettings : ScriptableObject {
     // Settings
-    float minSpeed = 2;
-    float maxSpeed = 5;
-    float perceptionRadius = 2.5f;
-    float avoidanceRadius = 1;
-    float maxSteerForce = 3;
+    public float minSpeed = 2;
+    public float maxSpeed = 5;
+    public float perceptionRadius = 2.5f;
+    public float avoidanceRadius = 1;
+    public float maxSteerForce = 3;
 
-    float alignWeight = 1;
+    public float alignWeight = 1;
     public float cohesionWeight = 1;
     public float seperateWeight = 1; 
 

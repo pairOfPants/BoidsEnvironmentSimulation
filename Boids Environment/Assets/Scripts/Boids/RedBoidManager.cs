@@ -6,7 +6,7 @@ public class RedBoidManager : MonoBehaviour {
 
     const int threadGroupSize = 1024;
 
-    public RedSettings settings;
+    public BoidSettings settings;
     public ComputeShader compute;
     RedBoid[] boids;
 

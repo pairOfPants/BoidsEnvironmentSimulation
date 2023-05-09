@@ -18,6 +18,7 @@ public class BlueSpawner : MonoBehaviour {
             BlueBoid boid = Instantiate(prefab);
             boid.transform.position = pos;
             boid.transform.forward = Random.insideUnitSphere;
+            boid.tag = "blue boid";
 
             boid.SetColour (colour);
         }

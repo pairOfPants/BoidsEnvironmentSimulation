@@ -90,13 +90,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a10df7dbf4dfaf4cb6287e6397ba98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
   forward: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
   avgFlockHeading: {x: 0, y: 0, z: 0}
   avgAvoidanceHeading: {x: 0, y: 0, z: 0}
   centreOfFlockmates: {x: 0, y: 0, z: 0}
   numPerceivedFlockmates: 0
   hunger: 0
+  material: {fileID: 0}
+  cachedTransform: {fileID: 0}
+  target: {fileID: 0}
+  ObstacleMask:
+    serializedVersion: 2
+    m_Bits: 11776
 --- !u!1 &8824877253583464066
 GameObject:
   m_ObjectHideFlags: 0

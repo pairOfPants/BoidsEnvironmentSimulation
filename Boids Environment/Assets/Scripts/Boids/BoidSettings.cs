@@ -28,5 +28,10 @@ public class BoidSettings : ScriptableObject {
     public float avoidCollisionWeight = 10;
     public float collisionAvoidDst = 5;
 
+    public void setObstacleMask(LayerMask ob)
+    {
+        obstacleMask = ob;
+    }
+
 }
 
