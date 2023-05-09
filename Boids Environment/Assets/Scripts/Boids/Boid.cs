@@ -37,7 +37,7 @@ public class Boid : MonoBehaviour
         cachedTransform = transform;
     }
 
-    public void Initialize (BoidSettings settings, Transform target) {
+    public virtual void Initialize (BoidSettings settings, Transform target) {
         this.target = target;
         this.settings = settings;
 

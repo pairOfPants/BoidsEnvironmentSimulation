@@ -12,11 +12,8 @@ public class BlueBoid : Boid {
         cachedTransform = transform;
     }
 
-    public void Initialize (BlueSettings settings, Transform target) 
-    {
+    public void Initialize (BlueSettings settings, Transform target) {
         
-        base.Initialize((BoidSettings)settings, target);
-       // base.settings.setObstacleMask(ObstacleMask);
     }
     
      public void UpdateRedBoid () 
