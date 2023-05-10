@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GreenBoid : Boid {
 
-    GreenSettings settings;
+    //GreenSettings settings;
     public LayerMask ObstacleMask;
 
     void Awake () {
@@ -12,10 +12,10 @@ public class GreenBoid : Boid {
         cachedTransform = transform;
     }
 
-    public void Initialize (BoidSettings settings, Transform target) 
+    public void Initialize ()//BoidSettings settings, Transform target) 
     {
-        base.Initialize(settings, target);
-        base.settings.setObstacleMask(ObstacleMask);
+        base.Initialize(target);
+       // base.settings.setObstacleMask(ObstacleMask);
     }
     
      public void UpdateRedBoid () 

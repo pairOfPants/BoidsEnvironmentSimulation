@@ -6,14 +6,14 @@ public class BlueBoidManager : MonoBehaviour {
 
     const int threadGroupSize = 1024;
 
-    public BlueSettings settings;
+    //public BlueSettings settings;
     public ComputeShader compute;
     BlueBoid[] boids;
 
     void Start () {
         boids = FindObjectsOfType<BlueBoid> ();
         foreach (BlueBoid b in boids) {
-            b.Initialize (settings, null);
+            b.Initialize();
         }
 
     }
@@ -34,8 +34,8 @@ public class BlueBoidManager : MonoBehaviour {
 
             compute.SetBuffer (0, "boids", boidBuffer);
             compute.SetInt ("numBoids", boids.Length);
-            compute.SetFloat ("viewRadius", settings.perceptionRadius);
-            compute.SetFloat ("avoidRadius", settings.avoidanceRadius);
+            compute.SetFloat ("viewRadius", boids[1].settings.perceptionRadius);
+            compute.SetFloat ("avoidRadius", boids[1].settings.avoidanceRadius);
 
             int threadGroups = Mathf.CeilToInt (numBoids / (float) threadGroupSize);
             compute.Dispatch (0, threadGroups, 1, 1);

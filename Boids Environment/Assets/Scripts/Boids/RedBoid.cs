@@ -15,7 +15,7 @@ public class RedBoid : Boid {
 
     public void Initialize (BoidSettings settings, Transform target) 
     {
-        base.Initialize(settings, target);
+        base.Initialize(target);
         base.settings.setObstacleMask(ObstacleMask);
     }
     

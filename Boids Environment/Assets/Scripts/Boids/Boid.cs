@@ -37,9 +37,9 @@ public class Boid : MonoBehaviour
         cachedTransform = transform;
     }
 
-    public virtual void Initialize (BoidSettings settings, Transform target) {
+    public virtual void Initialize ( Transform target) {
         this.target = target;
-        this.settings = settings;
+      //BoidSettings settings,  this.settings = settings;
 
         position = cachedTransform.position;
         forward = cachedTransform.forward;
@@ -88,9 +88,9 @@ public class Boid : MonoBehaviour
             for(int i = 0; i < numPerceivedFlockmates; i++) { 
                 if(target != null)
                 {
-                    Boid tempTarget = new Boid();
+                  /*  Boid tempTarget = new Boid();
                     tempTarget.cachedTransform = target;
-                   
+                   */
                         acceleration += seperationForce * 3;
                 }
             }
@@ -118,7 +118,7 @@ public class Boid : MonoBehaviour
 
         if (hunger > 0)
         {
-            hunger -= 0.3f;
+            hunger -= 3;
         }
         else
         {

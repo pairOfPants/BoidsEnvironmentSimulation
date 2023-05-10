@@ -23,13 +23,10 @@ MonoBehaviour:
   targetWeight: 2
   hunger: 400
   obstacleMask:
-    serializedVersion: 2
-    m_Bits: 5632
+    m_Bits: 7680
   thisBoid:
-    serializedVersion: 2
     m_Bits: 8192
   preyMask:
-    serializedVersion: 2
     m_Bits: 16384
   boundsRadius: 1
   avoidCollisionWeight: 500

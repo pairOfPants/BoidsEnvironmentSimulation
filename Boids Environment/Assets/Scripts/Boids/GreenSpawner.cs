@@ -13,13 +13,16 @@ public class GreenSpawner : MonoBehaviour {
     public GizmoType showSpawnRegion;
 
     void Awake () {
-        for (int i = 0; i < spawnCount; i++) {
+        for (int i = 0; i < spawnCount; i++) { 
             Vector3 pos = transform.position + Random.insideUnitSphere * spawnRadius;
             GreenBoid boid = Instantiate(prefab);
             boid.transform.position = pos;
             boid.transform.forward = Random.insideUnitSphere;
 
             boid.SetColour (colour);
+            boid.settings.obstacleMask |= (1 << LayerMask.NameToLayer("BBoid"));
+            boid.settings.obstacleMask |= (1 << LayerMask.NameToLayer("RBoid"));
+            boid.settings.hunger *= 1; //green boids have normal hunger bars
         }
     }
 

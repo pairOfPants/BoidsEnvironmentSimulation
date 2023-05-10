@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce032ee28506b064c933dbf57a3cc77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 0}
+  settings: {fileID: 11400000, guid: b902b18c6e50dcd47ba04de77e23f6fb, type: 2}
   position: {x: 0, y: 0, z: 0}
   forward: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}

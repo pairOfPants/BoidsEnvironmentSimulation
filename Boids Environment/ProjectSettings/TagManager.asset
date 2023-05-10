@@ -21,9 +21,9 @@ TagManager:
   - 
   - Obstacle
   - Wall
-  - Red Boid
-  - Green Boid
-  - Blue Boid
+  - RBoid
+  - GBoid
+  - BBoid
   - prey
   - 
   - 

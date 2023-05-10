@@ -13,7 +13,7 @@ public class RedBoidManager : MonoBehaviour {
     void Start () {
         boids = FindObjectsOfType<RedBoid> ();
         foreach (RedBoid b in boids) {
-            b.Initialize (settings, null);
+            b.Initialize (null);
         }
 
     }
