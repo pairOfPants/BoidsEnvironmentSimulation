@@ -15,6 +15,7 @@ public class BlueBoid : Boid {
     public void Initialize() //(BlueSettings settings, Transform target) {
     {
         base.Initialize(cachedTransform);
+        print("hi");
     }
     
    /*  public void UpdateBlueBoid () 
