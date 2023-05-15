@@ -17,10 +17,10 @@ public class BlueBoid : Boid {
         base.Initialize(cachedTransform);
     }
     
-     public void UpdateBlueBoid () 
+   /*  public void UpdateBlueBoid () 
      {
         base.UpdateBoid();
-     }
+     }*/
 
 
 }
