@@ -15,10 +15,12 @@ public class BlueBoid : Boid {
     public void Initialize() //(BlueSettings settings, Transform target) {
     {
         base.Initialize(cachedTransform);
-        print("hi");
+        this.settings.obstacleMask |= (1 << LayerMask.NameToLayer("GBoid"));
+        this.settings.obstacleMask |= (1 << LayerMask.NameToLayer("RBoid"));
+        this.settings.hunger *= 4; //blue boids have large hunger bars
     }
     
-   /*  public void UpdateBlueBoid () 
+   /* public void UpdateBlueBoid () 
      {
         base.UpdateBoid();
      }*/

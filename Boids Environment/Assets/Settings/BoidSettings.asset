@@ -21,10 +21,10 @@ MonoBehaviour:
   cohesionWeight: 80
   seperateWeight: 120
   targetWeight: 8
-  hunger: 875.1
+  hunger: Infinity
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 15872
   thisBoid:
     serializedVersion: 2
     m_Bits: 8192

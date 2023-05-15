@@ -150,12 +150,12 @@ public class Boid : MonoBehaviour
 
      Vector3 ObstacleRays () { //TODO: ADD PREY AND EATING MECHANIC
         Vector3[] rayDirections = BoidHelper.directions;
-        RaycastHit hit;
+        //RaycastHit hit;
 
         for (int i = 0; i < rayDirections.Length; i++) {
             Vector3 dir = cachedTransform.TransformDirection (rayDirections[i]);
             Ray ray = new Ray (position, dir);
-            if (!Physics.SphereCast (ray, settings.boundsRadius, settings.collisionAvoidDst, settings.obstacleMask)) {
+            if (Physics.SphereCast (ray, settings.boundsRadius, settings.collisionAvoidDst, settings.obstacleMask)) {
                 return dir;
             }
         }

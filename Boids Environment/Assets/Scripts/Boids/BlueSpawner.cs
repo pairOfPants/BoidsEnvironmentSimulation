@@ -21,9 +21,9 @@ public class BlueSpawner : MonoBehaviour {
             boid.tag = "blue boid";
 
             boid.SetColour(colour);
-            boid.settings.obstacleMask |= (1 << LayerMask.NameToLayer("GBoid"));
+          /*  boid.settings.obstacleMask |= (1 << LayerMask.NameToLayer("GBoid"));
             boid.settings.obstacleMask |= (1 << LayerMask.NameToLayer("RBoid"));
-            boid.settings.hunger *= 4; //blue boids have large hunger bars
+            boid.settings.hunger *= 4; //blue boids have large hunger bars*/
 
         }
     }

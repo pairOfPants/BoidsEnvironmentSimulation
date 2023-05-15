@@ -16,7 +16,9 @@ public class RedBoid : Boid {
     public void Initialize (BoidSettings settings, Transform target) 
     {
         base.Initialize(target);
-        base.settings.setObstacleMask(ObstacleMask);
+        this.settings.obstacleMask |= (1 << LayerMask.NameToLayer("BBoid"));
+        this.settings.obstacleMask |= (1 << LayerMask.NameToLayer("GBoid"));
+        this.settings.hunger *= 1; //green boids have normal hunger bars
     }
     
      public void UpdateRedBoid () 
