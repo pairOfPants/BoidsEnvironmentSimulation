@@ -98,7 +98,7 @@ public class Boid : MonoBehaviour
 
         if (IsHeadingForCollision()) {
             Vector3 collisionAvoidDir = ObstacleRays ();
-            Vector3 collisionAvoidForce = SteerTowards (collisionAvoidDir) * settings.avoidCollisionWeight;
+            Vector3 collisionAvoidForce = SteerTowards(collisionAvoidDir) * settings.avoidCollisionWeight;
             acceleration += collisionAvoidForce;
         }
         //hungerWeight = HowHungry();
@@ -152,7 +152,8 @@ public class Boid : MonoBehaviour
         Vector3[] rayDirections = BoidHelper.directions;
         //RaycastHit hit;
 
-        for (int i = 0; i < rayDirections.Length; i++) {
+        for (int i = 0; i < rayDirections.Length; i++)
+        {
             Vector3 dir = cachedTransform.TransformDirection (rayDirections[i]);
             Ray ray = new Ray (position, dir);
             if (Physics.SphereCast (ray, settings.boundsRadius, settings.collisionAvoidDst, settings.obstacleMask)) {

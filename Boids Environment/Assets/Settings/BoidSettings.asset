@@ -16,8 +16,8 @@ MonoBehaviour:
   maxSpeed: 400
   perceptionRadius: 808
   avoidanceRadius: 120
-  maxSteerForce: 32
-  alignWeight: 8
+  maxSteerForce: 20
+  alignWeight: 20
   cohesionWeight: 80
   seperateWeight: 120
   targetWeight: 8
@@ -32,5 +32,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16384
   boundsRadius: 1
-  avoidCollisionWeight: 500
-  collisionAvoidDst: 6
+  avoidCollisionWeight: 20
+  collisionAvoidDst: 20
