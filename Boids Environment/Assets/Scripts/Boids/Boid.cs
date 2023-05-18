@@ -96,7 +96,8 @@ public class Boid : MonoBehaviour
             }
         }
 
-        if (IsHeadingForCollision()) {
+       if (IsHeadingForCollision()) {
+
             Vector3 collisionAvoidDir = ObstacleRays ();
             Vector3 collisionAvoidForce = SteerTowards(collisionAvoidDir) * settings.avoidCollisionWeight;
             acceleration += collisionAvoidForce;
@@ -156,7 +157,7 @@ public class Boid : MonoBehaviour
         {
             Vector3 dir = cachedTransform.TransformDirection (rayDirections[i]);
             Ray ray = new Ray (position, dir);
-            if (Physics.SphereCast (ray, settings.boundsRadius, settings.collisionAvoidDst, settings.obstacleMask)) {
+            if (!Physics.SphereCast (ray, settings.boundsRadius, settings.collisionAvoidDst, settings.obstacleMask)) {
                 return dir;
             }
         }
@@ -204,9 +205,6 @@ public class Boid : MonoBehaviour
         
     // }
 
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
+     // Update is called once per frame
+    
 }
