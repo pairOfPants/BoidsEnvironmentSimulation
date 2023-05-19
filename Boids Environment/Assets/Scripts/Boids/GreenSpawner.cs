@@ -20,9 +20,9 @@ public class GreenSpawner : MonoBehaviour {
             boid.transform.forward = Random.insideUnitSphere;
 
             boid.SetColour (colour);
-            boid.settings.obstacleMask |= (1 << LayerMask.NameToLayer("BBoid"));
+          /*  boid.settings.obstacleMask |= (1 << LayerMask.NameToLayer("BBoid"));
             boid.settings.obstacleMask |= (1 << LayerMask.NameToLayer("RBoid"));
-            boid.settings.hunger *= 1; //green boids have normal hunger bars
+            boid.settings.hunger *= 1; //green boids have normal hunger bars*/
         }
     }
 

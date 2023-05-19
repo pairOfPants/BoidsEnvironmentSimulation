@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +20,7 @@ public class BlueSettings : ScriptableObject {
     static System.Random random = new System.Random();
     public float hunger = 400 + random.Next(0, 15);
 
-    *//* public float scale = BlueBoid.transform.localScale(3, 3, 3);*//*
+    // public float scale = BlueBoid.transform.localScale(3, 3, 3);
 
     [Header ("Collisions")]
     public LayerMask obstacleMask;
@@ -33,4 +33,3 @@ public class BlueSettings : ScriptableObject {
 }
 
 
-*/

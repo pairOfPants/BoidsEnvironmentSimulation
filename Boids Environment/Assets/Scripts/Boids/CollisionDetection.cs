@@ -34,6 +34,10 @@ public class CollisionDetection : MonoBehaviour
             // Object.DestroyImmediate(other.gameObject);
             // Object.DestroyImmediate(other.gameObject);
         }
+        if(this.gameObject.tag == "Boid" && other.gameObject.tag == "floor")
+        {
+            this.gameObject.transform.forward = -this.gameObject.transform.forward;
+        }
         /*
          * if this is a plant and that is a plant
          *      shift the position a little
