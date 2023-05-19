@@ -198,6 +198,11 @@ public class Boid : MonoBehaviour
 
     }
 
+   public void updateHunger(int food)
+    {
+        hunger += food;
+    }
+
 
     // // Start is called before the first frame update
     // void Start()

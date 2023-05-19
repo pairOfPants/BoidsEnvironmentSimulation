@@ -29,10 +29,8 @@ public class CollisionDetection : MonoBehaviour
         }
         if(this.gameObject.tag == "Boid" && other.gameObject.tag == "plant")
         {
-            //TODO incrememnt boid's hunger when colliding with plant
-            // other.gameObject.SetActive(false);
-            // Object.DestroyImmediate(other.gameObject);
-            // Object.DestroyImmediate(other.gameObject);
+            this.gameObject.GetComponent<Boid>().updateHunger(30);            //TODO incrememnt boid's hunger when colliding with plant
+            other.gameObject.GetComponent<Plant>().updateHealth(15);
         }
         if(this.gameObject.tag == "Boid" && other.gameObject.tag == "floor")
         {
