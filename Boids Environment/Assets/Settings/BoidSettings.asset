@@ -18,10 +18,10 @@ MonoBehaviour:
   avoidanceRadius: 120
   maxSteerForce: 10
   alignWeight: 20
-  cohesionWeight: 40
-  seperateWeight: 10
-  targetWeight: 100
-  hunger: Infinity
+  cohesionWeight: 80
+  seperateWeight: 20
+  targetWeight: 50
+  hunger: 10000
   obstacleMask:
     serializedVersion: 2
     m_Bits: 15872
