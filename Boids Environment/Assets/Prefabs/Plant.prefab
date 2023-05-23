@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7631521327497727588}
-  m_Layer: 14
+  m_Layer: 12
   m_Name: Plant
   m_TagString: plant
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 2480522210195323665}
   - component: {fileID: 2653003176162669907}
   - component: {fileID: 3893906155500642149}
-  m_Layer: 14
+  m_Layer: 12
   m_Name: Plant
   m_TagString: plant
   m_Icon: {fileID: 0}

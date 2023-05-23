@@ -21,16 +21,16 @@ MonoBehaviour:
   cohesionWeight: 20
   seperateWeight: 30
   targetWeight: 2
-  hunger: 218
+  hunger: 689.73
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 9728
+    m_Bits: 8384
   thisBoid:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 256
   preyMask:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 20480
   boundsRadius: 1
   avoidCollisionWeight: 500
-  collisionAvoidDst: 6
+  collisionAvoidDst: 6.07

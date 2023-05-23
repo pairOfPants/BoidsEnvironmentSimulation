@@ -27,11 +27,11 @@ public class CollisionDetection : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             this.gameObject.GetComponent<Rigidbody>().useGravity = false;
         }
-        if(this.gameObject.tag == "Boid" && other.gameObject.tag == "plant")
+        /*if(this.gameObject.tag == "Boid" && other.gameObject.tag == "plant")
         {
             this.gameObject.GetComponent<Boid>().updateHunger(30);            //TODO incrememnt boid's hunger when colliding with plant
             other.gameObject.GetComponent<Plant>().updateHealth(15);
-        }
+        }*/
         if(this.gameObject.tag == "Boid" && other.gameObject.tag == "floor")
         {
             this.gameObject.transform.forward = -this.gameObject.transform.forward;
