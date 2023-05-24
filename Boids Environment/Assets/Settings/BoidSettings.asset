@@ -24,13 +24,13 @@ MonoBehaviour:
   hunger: 1500
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 2147493824
+    m_Bits: 2147499968
   thisBoid:
     serializedVersion: 2
-    m_Bits: 10240
+    m_Bits: 32768
   preyMask:
     serializedVersion: 2
-    m_Bits: 20480
+    m_Bits: 16384
   boundsRadius: 1
   avoidCollisionWeight: 300
   collisionAvoidDst: 200
