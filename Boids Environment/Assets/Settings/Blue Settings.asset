@@ -12,25 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9849c06b4ab539845813d05736d869b0, type: 3}
   m_Name: Blue Settings
   m_EditorClassIdentifier: 
-  minSpeed: 80
-  maxSpeed: 140
-  perceptionRadius: 200
-  avoidanceRadius: 30
-  maxSteerForce: 8
-  alignWeight: 2
-  cohesionWeight: 15
-  seperateWeight: 30
-  targetWeight: 2
-  hunger: 400
+  minSpeed: 400
+  maxSpeed: 800
+  perceptionRadius: 808
+  avoidanceRadius: 120
+  maxSteerForce: 32
+  alignWeight: 8
+  cohesionWeight: 80
+  seperateWeight: 120
+  targetWeight: 8
+  hunger: 875.1
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 7872
   thisBoid:
     serializedVersion: 2
-    m_Bits: 8704
+    m_Bits: 8192
   preyMask:
     serializedVersion: 2
-    m_Bits: 20480
+    m_Bits: 16384
   boundsRadius: 1
   avoidCollisionWeight: 500
   collisionAvoidDst: 6

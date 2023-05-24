@@ -52,6 +52,10 @@ public class MapGenerator : MonoBehaviour
         else if (drawMode == DrawMode.ColourMap) display.DrawTexture(TextureGenerator.TextureFromColourMap(colourMap, mapChunkSize, mapChunkSize));
         else if (drawMode == DrawMode.mesh) display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail), TextureGenerator.TextureFromColourMap(colourMap, mapChunkSize, mapChunkSize));
     }
+    public void Start()
+    {
+        GenerateMap();
+    }
 
     private void OnValidate() //regulates the variables to make sure inputs will work
     {

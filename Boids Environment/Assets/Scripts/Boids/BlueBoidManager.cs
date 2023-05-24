@@ -6,7 +6,7 @@ public class BlueBoidManager : MonoBehaviour {
 
     const int threadGroupSize = 1024;
 
-    //public BlueSettings settings;
+    public BoidSettings settings;
     public ComputeShader compute;
     BlueBoid[] boids;
 

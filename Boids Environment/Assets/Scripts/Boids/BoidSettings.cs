@@ -21,7 +21,7 @@ public  class BoidSettings : ScriptableObject {
     public float hunger = 100 + random.Next(0, 15);
     
 
-    [Header ("Collisions")]
+   // [Header ("Collisions")]
     public LayerMask obstacleMask;
     public LayerMask thisBoid;
     public LayerMask preyMask;

@@ -21,16 +21,16 @@ MonoBehaviour:
   cohesionWeight: 40
   seperateWeight: 30
   targetWeight: 100
-  hunger: 1500
+  hunger: Infinity
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 2147493824
+    m_Bits: 2147499968
   thisBoid:
     serializedVersion: 2
-    m_Bits: 10240
+    m_Bits: 2048
   preyMask:
     serializedVersion: 2
     m_Bits: 20480
   boundsRadius: 1
-  avoidCollisionWeight: 300
-  collisionAvoidDst: 200
+  avoidCollisionWeight: 500
+  collisionAvoidDst: 6
