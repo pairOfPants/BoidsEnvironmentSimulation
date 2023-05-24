@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6891889851448780991}
   - component: {fileID: 2805374318328644328}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GreenSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

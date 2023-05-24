@@ -19,6 +19,7 @@ public  class BoidSettings : ScriptableObject {
 
     static System.Random random = new System.Random();
     public float hunger = 100 + random.Next(0, 15);
+    
 
     [Header ("Collisions")]
     public LayerMask obstacleMask;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5746906134426750269}
   - component: {fileID: 5576941479108263322}
   - component: {fileID: 5367608390787566788}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: RedBoid
   m_TagString: Boid
   m_Icon: {fileID: 0}
@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: b902b18c6e50dcd47ba04de77e23f6fb, type: 2}
+  center: {fileID: 1351323167186553899, guid: 1c24de3d4989fbf44b7fd5eb94b218b6, type: 3}
   position: {x: 0, y: 0, z: 0}
   forward: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
@@ -120,7 +121,7 @@ GameObject:
   - component: {fileID: 7013457480696822872}
   - component: {fileID: 4222452802183224384}
   - component: {fileID: 8238428764980817558}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: CapsuleBoid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

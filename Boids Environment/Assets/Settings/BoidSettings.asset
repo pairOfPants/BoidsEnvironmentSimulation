@@ -18,19 +18,19 @@ MonoBehaviour:
   avoidanceRadius: 120
   maxSteerForce: 10
   alignWeight: 20
-  cohesionWeight: 80
-  seperateWeight: 20
-  targetWeight: 50
-  hunger: 10000
+  cohesionWeight: 40
+  seperateWeight: 30
+  targetWeight: 100
+  hunger: 1500
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 15872
+    m_Bits: 2147493824
   thisBoid:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 10240
   preyMask:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 20480
   boundsRadius: 1
-  avoidCollisionWeight: 400
+  avoidCollisionWeight: 300
   collisionAvoidDst: 200

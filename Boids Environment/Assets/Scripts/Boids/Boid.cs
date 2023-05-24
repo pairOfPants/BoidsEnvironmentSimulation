@@ -32,12 +32,14 @@ public class Boid : MonoBehaviour
     public Transform cachedTransform;
     public Transform target;
 
-    void Awake () {
+    void Awake () 
+    {
         material = transform.GetComponentInChildren<MeshRenderer> ().material;
         cachedTransform = transform;
     }
 
-    public virtual void Initialize ( Transform target) {
+    public virtual void Initialize ( Transform target) 
+    {
         this.target = target;
       //BoidSettings settings,  this.settings = settings;
 
@@ -73,7 +75,8 @@ public class Boid : MonoBehaviour
             acceleration = SteerTowards (offsetToTarget) * settings.targetWeight;
         }
 
-        if (numPerceivedFlockmates != 0) {
+        if (numPerceivedFlockmates != 0) 
+        {
             centreOfFlockmates /= numPerceivedFlockmates;
 
             Vector3 offsetToFlockmatesCentre = (centreOfFlockmates - position);
@@ -85,7 +88,8 @@ public class Boid : MonoBehaviour
             acceleration += alignmentForce;
             acceleration += cohesionForce;
             acceleration += seperationForce;
-            for(int i = 0; i < numPerceivedFlockmates; i++) { 
+            for(int i = 0; i < numPerceivedFlockmates; i++) 
+            { 
                 if(target != null)
                 {
                   /*  Boid tempTarget = new Boid();
@@ -96,12 +100,22 @@ public class Boid : MonoBehaviour
             }
         }
 
-       if (IsHeadingForCollision()) {
+        hungerWeight = HowHungry();
+
+        if(IsHeadingForPrey())
+        {
+            Vector3 eatDirection = PreyRays();
+            Vector3 eatForce = SteerTowards(eatDirection) * hungerWeight;
+            acceleration += eatForce;
+        }
+        else if (IsHeadingForCollision()) 
+        {
 
             Vector3 collisionAvoidDir = ObstacleRays ();
             Vector3 collisionAvoidForce = SteerTowards(collisionAvoidDir) * settings.avoidCollisionWeight;
             acceleration += collisionAvoidForce;
         }
+
         //hungerWeight = HowHungry();
         //acceleration += SteerTowards(PreyRays()) * hungerWeight;
 
@@ -119,7 +133,7 @@ public class Boid : MonoBehaviour
 
         if (hunger > 0)
         {
-            hunger -= 3;
+            hunger -= .3f;
         }
         else
         {
@@ -131,25 +145,20 @@ public class Boid : MonoBehaviour
 
     }
 
-     bool IsHeadingForCollision () {
+    bool IsHeadingForCollision () 
+    {
         RaycastHit hit;
-        if (Physics.SphereCast (position, settings.boundsRadius, forward, out hit, settings.collisionAvoidDst, settings.obstacleMask)) {
-            return true;
-        }
-        return false;
+        return Physics.SphereCast(position, settings.boundsRadius, forward, out hit, settings.collisionAvoidDst, settings.obstacleMask);
     }
+
     bool IsHeadingForPrey()
     {
         RaycastHit hit;
-        if (Physics.SphereCast(position, settings.boundsRadius, forward, out hit, settings.collisionAvoidDst, settings.preyMask))
-        {
-            print("LALALALALALALALALALALALALA");
-            return true;
-        }
-        return false;
+        return Physics.SphereCast(position, settings.boundsRadius, forward, out hit, settings.perceptionRadius, settings.preyMask);
     }
 
-     Vector3 ObstacleRays () { //TODO: ADD PREY AND EATING MECHANIC
+     Vector3 ObstacleRays () 
+     {
         Vector3[] rayDirections = BoidHelper.directions;
         //RaycastHit hit;
 
@@ -174,16 +183,16 @@ public class Boid : MonoBehaviour
         {
             Vector3 dir = cachedTransform.TransformDirection(rayDirections[i]);
             Ray ray = new Ray(position, dir);
-            if (!Physics.SphereCast(ray, settings.boundsRadius, settings.collisionAvoidDst, settings.preyMask))
+            if (!Physics.SphereCast(ray, settings.boundsRadius, settings.perceptionRadius, settings.preyMask))
             {
-             //   print("see plant");
                 return dir;
             }
         }
         return forward;
     }
  
-    Vector3 SteerTowards (Vector3 vector) {
+    Vector3 SteerTowards (Vector3 vector) 
+    {
         Vector3 v = vector.normalized * settings.maxSpeed - velocity;
         return Vector3.ClampMagnitude (v, settings.maxSteerForce);
     }
@@ -195,16 +204,11 @@ public class Boid : MonoBehaviour
         else if (hunger < settings.hunger * 0.75)
             return 1;
         else return 0.5f;
-
     }
 
+   public void updateHunger(int food)
+    {
+        hunger += food;
+    }
 
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-
-     // Update is called once per frame
-    
 }
