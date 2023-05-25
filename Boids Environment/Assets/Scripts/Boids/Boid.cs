@@ -100,8 +100,6 @@ public class Boid : MonoBehaviour
             }
         }
 
-
-       if (IsHeadingForCollision()) {
         hungerWeight = HowHungry();
 
         if(IsHeadingForPrey())
@@ -209,7 +207,7 @@ public class Boid : MonoBehaviour
         else return 0.5f;
     }
 
-   public void updateHunger(int food)
+    void updateHunger(int food)
     {
         hunger += food;
     }
