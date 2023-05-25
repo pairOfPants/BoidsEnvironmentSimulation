@@ -100,6 +100,8 @@ public class Boid : MonoBehaviour
             }
         }
 
+
+       if (IsHeadingForCollision()) {
         hungerWeight = HowHungry();
 
         if(IsHeadingForPrey())
@@ -110,14 +112,15 @@ public class Boid : MonoBehaviour
         }
         else if (IsHeadingForCollision()) 
         {
-
             Vector3 collisionAvoidDir = ObstacleRays ();
             Vector3 collisionAvoidForce = SteerTowards(collisionAvoidDir) * settings.avoidCollisionWeight;
             acceleration += collisionAvoidForce;
         }
 
+
         //hungerWeight = HowHungry();
         //acceleration += SteerTowards(PreyRays()) * hungerWeight;
+
 
         velocity += acceleration * Time.deltaTime;
         float speed = velocity.magnitude;
