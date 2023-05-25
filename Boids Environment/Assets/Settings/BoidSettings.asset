@@ -30,7 +30,7 @@ MonoBehaviour:
     m_Bits: 2048
   preyMask:
     serializedVersion: 2
-    m_Bits: 20480
+    m_Bits: 16384
   boundsRadius: 1
   avoidCollisionWeight: 500
   collisionAvoidDst: 6
