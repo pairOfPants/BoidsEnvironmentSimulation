@@ -96,14 +96,30 @@ public class Boid : MonoBehaviour
             }
         }
 
+<<<<<<< Updated upstream
        if (IsHeadingForCollision()) {
+=======
+        hungerWeight = HowHungry();
+
+        if(IsHeadingForPrey())
+        {
+            Vector3 eatDirection = -PreyRays();
+            Vector3 eatForce = SteerTowards(eatDirection) * hungerWeight;
+            acceleration += eatForce;
+        }
+        else if (IsHeadingForCollision()) 
+        {
+>>>>>>> Stashed changes
 
             Vector3 collisionAvoidDir = ObstacleRays ();
             Vector3 collisionAvoidForce = SteerTowards(collisionAvoidDir) * settings.avoidCollisionWeight;
             acceleration += collisionAvoidForce;
         }
+<<<<<<< Updated upstream
         //hungerWeight = HowHungry();
         //acceleration += SteerTowards(PreyRays()) * hungerWeight;
+=======
+>>>>>>> Stashed changes
 
         velocity += acceleration * Time.deltaTime;
         float speed = velocity.magnitude;
