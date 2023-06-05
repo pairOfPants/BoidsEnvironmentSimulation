@@ -24,7 +24,7 @@ MonoBehaviour:
   hunger: 689.73
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 14016
+    m_Bits: 46784
   thisBoid:
     serializedVersion: 2
     m_Bits: 2304

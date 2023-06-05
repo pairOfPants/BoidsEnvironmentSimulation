@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Bits: 2147499968
   thisBoid:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 32768
   preyMask:
     serializedVersion: 2
     m_Bits: 16384
