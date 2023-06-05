@@ -110,7 +110,6 @@ public class Boid : MonoBehaviour
         }
         else if (IsHeadingForCollision()) 
         {
-
             Vector3 collisionAvoidDir = ObstacleRays ();
             Vector3 collisionAvoidForce = SteerTowards(collisionAvoidDir) * settings.avoidCollisionWeight;
             acceleration += collisionAvoidForce;

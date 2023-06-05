@@ -18,6 +18,8 @@ public class RedBoid : Boid {
         base.Initialize(target);
         this.settings.obstacleMask |= (1 << LayerMask.NameToLayer("BBoid"));
         this.settings.obstacleMask |= (1 << LayerMask.NameToLayer("GBoid"));
+        this.settings.obstacleMask |= (1 << LayerMask.NameToLayer("Wall"));
+        this.settings.obstacleMask |= (1 << LayerMask.NameToLayer("Obstacle"));
         this.settings.hunger *= 1; //green boids have normal hunger bars
     }
     

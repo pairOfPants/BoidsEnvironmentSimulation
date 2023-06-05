@@ -20,6 +20,8 @@ public class RedSpawner : MonoBehaviour {
             boid.transform.forward = Random.insideUnitSphere;
 
             boid.SetColour (colour);
+           
+            
         }
     }
 

@@ -13,8 +13,9 @@ public class Plant : MonoBehaviour
     public GizmoType showSpawnRegion;
     public bool hasReproduced = false;
     public int health;
-    public int reproNum; //# of new plants
-    public int reproRad; //how close new plants spawn
+    public int reproNum = 10; //# of new plants
+    public int reproRad = 10;
+    private int framesPassed = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Plant : MonoBehaviour
             Vector3 pos = transform.position + new Vector3 (Random.Range(0f, spawnRadius), 0, Random.Range(0f, spawnRadius));
             GameObject plant = Instantiate(prefab);
             plant.transform.position = pos;
+            reproNum = reproNum * (int)Random.Range(0.5f, 3f);
         }
     }
     private void OnDrawGizmos()
@@ -60,6 +62,21 @@ public class Plant : MonoBehaviour
     }
     void Update()
     {
+        framesPassed++;
+        print(framesPassed);
+        if(framesPassed >= 600)
+        {
+            framesPassed = 0;
+            for(int i = 0; i< reproNum; i++)
+            {
+                print("HI");              
+                Vector3 pos = transform.position + new Vector3 (Random.Range(0f, spawnRadius), 0, Random.Range(0f, spawnRadius));
+                GameObject plant = Instantiate(prefab);
+                plant.transform.position = pos;
+                reproNum = reproNum * (int)Random.Range(0.5f, 3f);
+                print("A NEW PLANT SPAWNED");
+            }
+        }
         //If an object collides with it
         //health subract some value
         //object's hunger fills some value (could be different by color)
