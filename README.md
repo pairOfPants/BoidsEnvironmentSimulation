@@ -10,9 +10,8 @@ The boid (bird-oid) algorithm is a common artificial life program that simulates
 
 The combination of these three simple rules can create some advanced behavior, such as in the photos below (taken from my project)
 ![Alt text](<Boids Image 1.jpg>)
-
-***MORE IMAGES TO COME***
-
+![Alt text](image.png)
+![Alt text](image-1.png)
 
 I have extended the boid algorithm to create different species of boids (represented by the different colors shown above) each with different characteristics to differentiate them.
 ## Characteristics of my Boids
