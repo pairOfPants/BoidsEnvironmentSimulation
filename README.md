@@ -1,4 +1,4 @@
-# BoidsEnvironmentSimulation
+# Boids Environment Simulation
 ***NOTE** This project is not in its final state. This was a project for school and the school did not permit me to upload the final working version of my boids project. This version is bare-bones and most of the natural selection has yet to be implemented, but the boids algorithm, different species, and procedurally generated terrain are fully implemented*
 ## Description
 The project, in its simplicity, is an extension of the boids algorithm to construct a fish-like ecosystem and simulate natural selection and reproduction. 
