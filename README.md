@@ -9,6 +9,7 @@ The boid (bird-oid) algorithm is a common artificial life program that simulates
 3. Alignment: Boids of a flock will align themselves in such a way that all boids (ideally) move in the same direction
 
 The combination of these three simple rules can create some advanced behavior, such as in the photos below (taken from my project)
+
 ![Alt text](<Boids Image 1.jpg>)
 ![Alt text](image.png)
 ![Alt text](image-1.png)
@@ -30,16 +31,16 @@ The different characteristics being simulated are:
 
 All boids die when their hunger reaches zero and all plants die when their health reaches zero. Plants to not feed on anything as they photosynthesize. 
 
-##Different Species
-#####Herbivores (Green Boids)
+<h2>Different Species</h2>
+<h5>Herbivores (Green Boids) </h5>
 These creatures are the most small in size (the screenshot does not represent this as they are closer to the camera), have the fastest hunger, feed on the plants, and are the prey for the red and purple boids.
 
-#####Common Fish (Red and Purple Boids)
+<h5>Common Fish (Red and Purple Boids)</h5>
 These boids are your standard, middle-of-the-pack boids with medium speed, medium hunger, and the highest cohesion value. These boids feed on the herbivores, as well as each other (reds eat purple and vice-versa).
 
-#####Sharks (Blue Boids)
+<h5>Sharks (Blue Boids)</h5>
 The apex predator in my simulation, the sharks feed on both the common fish and move the slowest, can survive without food for the longest, and rarely travel in schools. Sharks also reproduce the least often, and their only real threat is not finding food fast enough.
 
-##Other Features
+<h2>Other Features</h2>
 In an attempt to add another feature to my ecosystem (get a better grade on my project) I implemented procedurally generated three-dimensional terrain. The boid species originally spawn (colored circles) on different corners of the map and have to navigate their way towards all food. There are a number of variables to change, but it is a pretty standard mesh implementation using perlin noise.
 ![Alt text](<Boids Terrain Image 1.jpg>)
